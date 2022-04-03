@@ -6,6 +6,7 @@ Would like an ecapsulating class
 from dataclasses import dataclass
 import threading
 import time
+from typing import Dict, List
 
 import psutil
 
@@ -16,8 +17,8 @@ from SystemHelper.system_helper import SystemInfo
 @dataclass
 class MetricInfo:
     title: str 
-    xs: list[float]
-    ys: list[float]
+    xs: List[float]
+    ys: List[float]
 
 class MetricPlot:
     """
@@ -26,7 +27,7 @@ class MetricPlot:
     
     import matplotlib.pyplot as plt
 
-    _lines : dict[str, MetricInfo]
+    _lines : Dict[str, MetricInfo]
 
     READ_COUNT = 'read count'
     WRITE_COUNT = 'write count'

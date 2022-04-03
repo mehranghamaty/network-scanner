@@ -1,5 +1,5 @@
 #from dataclasses import dataclass
-from typing import Optional
+from typing import List, Optional
 import psutil
 
 
@@ -26,8 +26,8 @@ class SystemInfo:
     """
         Holds system information.
     """
-    _processes : Optional[list[Proc]]
-    _nics : Optional[list[str]]
+    _processes : Optional[List[Proc]]
+    _nics : Optional[List[str]]
     _connections = None
     _process_lookup = None
 
