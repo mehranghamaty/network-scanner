@@ -21,8 +21,7 @@ def join_threads():
     for t in threads:
         t.join()
 
-"""
-window = snw.NetworkGrid(system_info)
+window = snw.NetworkGrid(system_info, location=(20,20))
 
 while True:
     event, values = window.read()
@@ -56,6 +55,7 @@ if pid:
 else:
     print("no suitable pid was found", pid)
 
+"""
 join_threads()
 
 #join_threads()

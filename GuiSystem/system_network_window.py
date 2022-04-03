@@ -9,9 +9,9 @@ class NetworkGrid(GridWindow):
         Static view 
     """
 
-    def __init__(self, system_info):
+    def __init__(self, system_info, *args, **kwargs):
         self._si = system_info
-        super(NetworkGrid, self).__init__(self._si.connections)
+        super(NetworkGrid, self).__init__(self._si.connections, *args, **kwargs)
 
     def read(self):
 

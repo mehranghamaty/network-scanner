@@ -38,11 +38,11 @@ class GridWindow(sg.Window):
         print(self._layout)
         return self._layout
 
-    def __init__(self, list_of_named_tuple):
+    def __init__(self, list_of_named_tuple, *args, **kwargs):
         self._contents = list_of_named_tuple
         self._title = type(self._contents).__name__
         self._genLayout()
-        super(GridWindow, self).__init__(self._title, self._layout)
+        super(GridWindow, self).__init__(self._title, self._layout, *args, **kwargs)
 
 
 if __name__ == "__main__":
