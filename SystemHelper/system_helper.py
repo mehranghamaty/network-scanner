@@ -44,7 +44,10 @@ class SystemInfo:
         print("processes are ", self._processes)
 
     def _getConnections(self):
-        self._connections = psutil.net_connections()
+        try:
+            self._connections = psutil.net_connections()
+        except psutil.AccessDenied:
+            raise
         #for conn in self._connections:
         #    print(conn)
 

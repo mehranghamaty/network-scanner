@@ -1,0 +1,13 @@
+name: network-scanner
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python
+  - matplotlib
+  - pysimplegui
+  - pip
+  - pip:
+    - -r requirements.txt

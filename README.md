@@ -27,6 +27,8 @@ Current State:
 the problem seems to be related to event returning none, it should be the item row, maybe override the read method in the network window
 
 
+Seems as though conda doesn't launch python as the same pid so sudo conda ... doesn't seem to generate the expected behavior
+
 Should find a proper structure
 
 Generics/
@@ -36,8 +38,46 @@ main.py
 
 ?
 
-
-
 # Running
 
 python3 main.py
+
+
+# Install
+
+General
+
+"""
+pip install -r requirements.txt
+"""
+
+OSX
+
+"""
+brew install python-tk
+"""
+
+# Docker 
+Make sure enough memory has been assigned (this would be with the desktop app)
+Dam, you cannot run it in a container for hopefully obvious reasons
+
+
+Seems as though osx blocks asking for the network traffic information. 
+
+brew 
+
+so sudo python netcontest.py works 
+
+but 
+
+sudo python3 netcontest does not
+
+(no conda)
+
+but conda doesn't seem to have pysimplegui
+
+darwin doesn't give access to io_counters....
+
+maybe just checking .connections and .open_files would be enough...
+
+(probably not if it would be a rootkit or something, but those would probably be a good way to filter to proces we would give a damn towards)
