@@ -1,16 +1,8 @@
-# Network Tool
+# Network Analysis Tool
 
-Would like a gui application to monitor network traffer for each process id.
-
-# TODO
+Would like a gui application to monitor network traffer for each process id on a unix system.
 
 The way that psysimple works would like a widget for 
-
-1. graphs
-    a. Should have a legend
-    b. display 2 lines
-
-Okay seems like the app is somewhat okay. 
 
 Here's a screengrab of the list of processes; which works on Windows and Linux
 
@@ -19,26 +11,28 @@ Here's a screengrab of the list of processes; which works on Windows and Linux
 When selecting a process from the list a graph launches providing information regarding the process. 
 This only works on Linux at the moment. Also single threaded which should be updated.
 
-Seems as though conda doesn't launch python as the same pid so sudo conda ... doesn't seem to generate the expected behavior. 
+Seems as though conda doesn't launch python as the same pid so `sudo conda ...` doesn't seem to generate the expected behavior. 
 As such should be launched with native python.
 
-# Running
+# In order to run
 
+```
 python main.py
+```
 
 # Install
 
 General
 
-"""
+```
 pip install -r requirements.txt
-"""
+```
 
 OSX
 
-"""
+```
 brew install python-tk
-"""
+```
 
 # Docker 
 Make sure enough memory has been assigned (this would be with the desktop app)
